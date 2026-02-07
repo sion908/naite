@@ -1,0 +1,23 @@
+---
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href={`${import.meta.env.BASE_URL}/favicon.ico`} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | NaITE - 長崎IT技術者会</title>
+	</head>
+	<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+		<Header />
+		<main class="flex-grow container mx-auto px-4 py-8">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

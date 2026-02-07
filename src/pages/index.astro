@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ホーム">
+	<!-- Hero Section -->
+	<section class="relative text-center py-32 rounded-3xl mb-12 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src={`${import.meta.env.BASE_URL}/hero.png`} alt="NaITE Hero" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-blue-900/60 mix-blend-multiply"></div>
+        </div>
+        
+        <div class="relative z-10 px-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6 tracking-tight drop-shadow-lg">
+                NaITE<br/>
+                <span class="text-3xl md:text-4xl text-blue-200 font-bold block mt-4">長崎IT技術者会</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                長崎に縁がある、または長崎に関心のあるIT技術者を中心とした<br/>
+                非営利の技術コミュニティです。
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://nagasaki-it-engineers.connpass.com/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full transition-colors shadow-lg">
+                    Connpassで参加する
+                </a>
+                <a href={`${import.meta.env.BASE_URL}/events`} class="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-8 rounded-full border border-blue-200 transition-colors shadow-lg">
+                    イベント一覧
+                </a>
+            </div>
+        </div>
+	</section>
+
+	<!-- About Section -->
+	<section class="mb-16">
+		<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center border-b-4 border-blue-500 inline-block mx-auto pb-2">NaITEについて</h2>
+		<div class="grid md:grid-cols-3 gap-8 text-center">
+			<div class="p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition-shadow">
+				<div class="text-4xl mb-4">🌏</div>
+				<h3 class="text-xl font-bold mb-2">長崎×IT</h3>
+				<p class="text-gray-600">長崎出身・在住・縁があるメンバーが中心となって活動しています。</p>
+			</div>
+			<div class="p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition-shadow">
+				<div class="text-4xl mb-4">📚</div>
+				<h3 class="text-xl font-bold mb-2">学びと交流</h3>
+				<p class="text-gray-600">ソフトウェア品質・開発関連の学習や交流を目的とした活動を実施。</p>
+			</div>
+			<div class="p-6 bg-white rounded-xl shadow-md border hover:shadow-lg transition-shadow">
+				<div class="text-4xl mb-4">🤝</div>
+				<h3 class="text-xl font-bold mb-2">ボランティアベース</h3>
+				<p class="text-gray-600">非営利・プロジェクトベースのコミュニティ活動を行っています。</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Activities Section -->
+	<section class="mb-16 bg-gray-50 p-8 rounded-2xl">
+		<h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">活動の特徴</h2>
+		<div class="grid md:grid-cols-2 gap-12 items-center">
+			<div>
+				<h3 class="text-2xl font-bold text-blue-800 mb-4">定期・不定期イベント</h3>
+				<p class="text-gray-700 mb-4 leading-relaxed">
+					不定期の勉強会・もくもく会・交流会・セミナーを行っています。
+				</p>
+				<ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+					<li><strong>もくもく会:</strong> 集中作業会 + LT等（福岡開催実績もあり）</li>
+					<li><strong>セミナー:</strong> 事例とワークショップ形式（例：TOCセミナー長崎）</li>
+					<li><strong>交流会:</strong> 技術者同士のネットワーキング</li>
+				</ul>
+			</div>
+			<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+				<h3 class="text-2xl font-bold text-indigo-800 mb-4">長崎QDG</h3>
+				<p class="text-sm text-gray-500 mb-2 font-mono">Nagasaki Software Quality and Development Gathering</p>
+				<p class="text-gray-700 mb-4 leading-relaxed">
+					NaITEが中心となって開催する年次の大規模技術イベントです。
+					出島メッセ長崎などでの開催実績があり、ソフトウェア品質や開発技術をテーマにしています。
+				</p>
+			</div>
+		</div>
+	</section>
+
+    <!-- History Summary -->
+    <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">活動の方向性</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="border-l-4 border-green-500 pl-4 py-2">
+                <h3 class="text-lg font-bold mb-1">技術の学びと共有</h3>
+                <p class="text-sm text-gray-600">勉強会・LT・技術セッションを通じて知識を共有</p>
+            </div>
+            <div class="border-l-4 border-blue-500 pl-4 py-2">
+                <h3 class="text-lg font-bold mb-1">実践的な交流の場</h3>
+                <p class="text-sm text-gray-600">もくもく会など、アウトプットにつながる交流</p>
+            </div>
+            <div class="border-l-4 border-purple-500 pl-4 py-2">
+                <h3 class="text-lg font-bold mb-1">カンファレンス</h3>
+                <p class="text-sm text-gray-600">大規模イベント形式でのコミュニティ活動</p>
+            </div>
+        </div>
+    </section>
+
+	<!-- Links Section -->
+	<section class="text-center bg-gray-900 text-white p-12 rounded-2xl">
+		<h2 class="text-3xl font-bold mb-8">Connect with Us</h2>
+		<div class="flex flex-col md:flex-row justify-center gap-6">
+			<a href="https://nagasaki-it-engineers.connpass.com/" target="_blank" class="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors font-bold">
+				<span>Connpass</span>
+			</a>
+			<a href="https://www.facebook.com/NagasakiITEngineers/" target="_blank" class="flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg transition-colors font-bold">
+				<span>Facebook</span>
+			</a>
+		</div>
+	</section>
+</Layout>

@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+    --color-naite-red: #E94924;
+}
